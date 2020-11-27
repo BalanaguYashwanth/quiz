@@ -1,7 +1,6 @@
 <template>
   <div>
       <h1> Quiz  </h1>
-      
        time :- {{formattedElapsedTime}}
          <br>
     <div>
@@ -59,8 +58,6 @@ computed: {
   },
  
   methods: {
-
-
       start() {
       this.timer = setInterval(() => {
         this.elapsedTime += 1000;
@@ -87,8 +84,7 @@ computed: {
         }
      },
 
-    
-   
+ 
 
     submit: function () {
 
@@ -124,9 +120,6 @@ computed: {
   
 
   created() {
-
-   
-   
     axios
       .get("https://quizappdjango.herokuapp.com/api/quiz/")
       .then((res) => {
@@ -152,9 +145,6 @@ computed: {
 
 
     this.start()
-   
-    
-
 },
 
 };
